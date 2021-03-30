@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Agenda</title>
+    <h1>Login</h1>
+  </head>
+  <body>
+    <div align="center">
+      <form action="submit" method="POST">{%csrf_token%}
+        <label>Usuário:</label>
+        <br>
+        <input type="text" name="username">
+        <br>
+        <label>Senha:</label>
+        <br>
+        <input type="password" name="password">
+        <br><br>
+        <button type="submit">Login</button>
+        <button type="submit" name="cadastro" value=1>Cadastrar-se</button>
+      </form>
+    </div>
+    {%for message in messages%}
+      <div align="center">
+        <strong>Erro: {{message}}</strong>
+      </div>
+    {%endfor%}
+  </body>
+</html>
