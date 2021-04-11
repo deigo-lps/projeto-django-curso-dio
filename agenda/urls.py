@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/',views.agenda),
@@ -28,4 +31,4 @@ urlpatterns = [
     path('login/',views.login_user),
     path('login/submit',views.submit_login),
     path('',RedirectView.as_view(url='agenda/'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
