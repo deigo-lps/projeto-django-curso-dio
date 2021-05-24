@@ -1,6 +1,0 @@
-{
-1:"Obrigado por se cadastrar",
-2:"Clk brabo fi cadastros foda",
-3:"levante levante peso imediatamente",
-4:"немедленно поднимите подъемный вес",
-}
